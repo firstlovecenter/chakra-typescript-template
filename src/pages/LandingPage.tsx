@@ -14,7 +14,7 @@ const LandingPage = () => {
   return (
     <Box textAlign="center" fontSize="xl">
       <Grid minH="50vh" p={3}>
-        <Heading fontSize="2xl" marginTop={20}>
+        <Heading fontSize="3xl" textTransform="uppercase" marginTop={20}>
           Flow Giving
         </Heading>
         <Text marginBottom={20} color={brand}>
