@@ -16,7 +16,7 @@ const Other = () => {
           <ChakraBox animate={{ x: [-40, 0] }}>
             <Box dropShadow={"2xl"} bg={bg} padding={6} borderRadius={20}>
               <Text color={brand} fontWeight="bold">
-                SendWave/TapTap Send
+                SendWave/TapTap Send 
               </Text>
               <Text marginBottom={5}>024 631 8494</Text>
             </Box>
