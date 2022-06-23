@@ -1,32 +1,31 @@
-import {
-  Box,
-  Grid,
-  GridItem,
-  Center,
-  Text,
-  Heading,
-  Link,
-} from "@chakra-ui/react"
+import { Box, Grid, GridItem, Center, Text, Heading } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
 import { ChakraBox } from "../components/ChakraBox"
-import { ColorModeSwitcher } from "../components/ColorModeSwitcher"
 import GhanaFlag from "../assets/flags/GhanaFlag"
 import Globe from "../assets/flags/Globe"
 import UKFlag from "../assets/flags/UKFlag"
 import USAFLag from "../assets/flags/USAFlag"
 import useCustomColorMode from "../hooks/useCustomColorMode"
+
 const LandingPage = () => {
   const navigate = useNavigate()
   const { bg, brand } = useCustomColorMode()
 
   return (
-    <Box textAlign="center" fontSize="xl">
+    <Box
+      textAlign="center"
+      fontSize="xl"
+      backgroundImage={"url(../assets/images/bg.jpg)"}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+    >
       <Grid minH="50vh" p={3}>
         <Heading fontSize="2xl" marginTop={20}>
           Flow Giving
         </Heading>
-        <Text color={brand}>Give a flow offering today!</Text>
-        <ColorModeSwitcher justifySelf="flex-end" />
+        <Text marginBottom={20} color={brand}>
+          Give a flow offering today!
+        </Text>
         <Center>
           <Grid templateColumns="repeat(2, 1fr)" gap={6}>
             <GridItem w="100%">
@@ -35,7 +34,7 @@ const LandingPage = () => {
                   onClick={() => {
                     navigate("/ghana")
                   }}
-                  dropShadow={"2xl"}
+                  boxShadow="sm"
                   bg={bg}
                   paddingY={6}
                   paddingX={12}
@@ -88,16 +87,20 @@ const LandingPage = () => {
             </GridItem>{" "}
             <GridItem w="100%">
               <ChakraBox animate={{ x: [-50, 0] }}>
-                <Link href="https://paylink.today/firstlovechurch/">
-                  <Box bg={bg} paddingY={6} paddingX={12} borderRadius={20}>
-                    <Box opacity="75%">
-                      <Globe />
-                    </Box>
-                    <Text marginTop={5} fontSize="small" fontWeight="bold">
-                      Other
-                    </Text>
+                <Box
+                  bg={bg}
+                  paddingY={6}
+                  paddingX={12}
+                  borderRadius={20}
+                  onClick={() => navigate("/other")}
+                >
+                  <Box opacity="75%">
+                    <Globe />
                   </Box>
-                </Link>
+                  <Text marginTop={5} fontSize="small" fontWeight="bold">
+                    Other
+                  </Text>
+                </Box>
               </ChakraBox>
             </GridItem>
           </Grid>

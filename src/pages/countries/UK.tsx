@@ -1,5 +1,5 @@
 import { Box, Grid, Text, Heading, VStack } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "../../components/ColorModeSwitcher"
+import { ChakraBox } from "../../components/ChakraBox"
 import useCustomColorMode from "../../hooks/useCustomColorMode"
 const UK = () => {
   const { bg, brand } = useCustomColorMode()
@@ -11,20 +11,22 @@ const UK = () => {
         </Heading>
 
         <VStack align={"stretch"}>
-          <Box dropShadow={"2xl"} bg={bg} padding={6} borderRadius={20}>
-            <Text color={brand} fontWeight="bold" marginBottom={5}>
-              Bank Account Details{" "}
-            </Text>
-            <Text>
-              <Text as="b">Account Name: </Text>First Love Church
-            </Text>
-            <Text>
-              <Text as="b">Sort Code: </Text>20-90-74
-            </Text>
-            <Text>
-              <Text as="b">Account Number: </Text>03793559
-            </Text>
-          </Box>
+          <ChakraBox animate={{ x: [-40, 0] }}>
+            <Box dropShadow={"2xl"} bg={bg} padding={6} borderRadius={20}>
+              <Text color={brand} fontWeight="bold" marginBottom={5}>
+                Bank Account Details{" "}
+              </Text>
+              <Text>
+                <Text as="b">Account Name: </Text>First Love Church
+              </Text>
+              <Text>
+                <Text as="b">Sort Code: </Text>20-90-74
+              </Text>
+              <Text>
+                <Text as="b">Account Number: </Text>03793559
+              </Text>
+            </Box>
+          </ChakraBox>
         </VStack>
       </Grid>
       <Text marginTop={150}>God Bless You As You Give!</Text>
