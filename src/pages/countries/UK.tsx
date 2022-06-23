@@ -6,9 +6,7 @@ const UK = () => {
   return (
     <Box textAlign="center" fontSize="xl">
       <Grid minH="50vh" p={3}>
-        <Heading fontSize="2xl" marginY={20}>
-          Give in the UK
-        </Heading>
+        <Heading marginY={20}>United Kingdom</Heading>
 
         <VStack align={"stretch"}>
           <ChakraBox animate={{ x: [-40, 0] }}>

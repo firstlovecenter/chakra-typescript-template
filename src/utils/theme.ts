@@ -15,6 +15,5 @@ const colors = {
 
 // 3. extend the theme
 const theme = extendTheme({ config, colors })
-console.log(theme, "theme")
 
 export default theme

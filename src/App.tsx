@@ -8,10 +8,12 @@ import UK from "./pages/countries/UK"
 import USA from "./pages/countries/USA"
 import Navigation from "./pages/Navigation"
 import Other from "./pages/countries/Other"
+import BackButton from "./pages/BackButton"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <BrowserRouter>
+      <BackButton />
       <Navigation />
       <Routes>
         <Route path="/" element={<LandingPage />} />

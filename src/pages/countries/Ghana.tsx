@@ -8,7 +8,7 @@ const Ghana = () => {
     <Box textAlign="center" fontSize="xl">
       <Grid minH="50vh" p={3}>
         <Heading fontSize="2xl" marginTop={20} marginBottom={10}>
-          Give in Ghana
+          Ghana
         </Heading>
 
         <VStack align={"stretch"}>

@@ -62,8 +62,9 @@ const Navigation = () => {
           <DrawerHeader>Menu</DrawerHeader>
 
           <DrawerBody>
-            {menuItems.map((item) => (
+            {menuItems.map((item, i) => (
               <Button
+                key={i}
                 bg={bg}
                 paddingY={8}
                 marginY={2}

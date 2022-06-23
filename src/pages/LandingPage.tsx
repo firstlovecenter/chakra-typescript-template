@@ -12,13 +12,7 @@ const LandingPage = () => {
   const { bg, brand } = useCustomColorMode()
 
   return (
-    <Box
-      textAlign="center"
-      fontSize="xl"
-      backgroundImage={"url(../assets/images/bg.jpg)"}
-      backgroundPosition="center"
-      backgroundRepeat="no-repeat"
-    >
+    <Box textAlign="center" fontSize="xl">
       <Grid minH="50vh" p={3}>
         <Heading fontSize="2xl" marginTop={20}>
           Flow Giving
@@ -36,11 +30,12 @@ const LandingPage = () => {
                   }}
                   boxShadow="sm"
                   bg={bg}
+                  height="100%"
                   paddingY={6}
                   paddingX={12}
                   borderRadius={20}
                 >
-                  <Box opacity="75%">
+                  <Box opacity="75%" height={50}>
                     <GhanaFlag />
                   </Box>
                   <Text marginTop={5} fontWeight="bold">
@@ -49,7 +44,7 @@ const LandingPage = () => {
                 </Box>
               </ChakraBox>
             </GridItem>
-            <GridItem w="100%">
+            <GridItem width="100%" height="100%">
               <ChakraBox animate={{ x: [-30, 0] }}>
                 <Box
                   onClick={() => navigate("/uk")}
@@ -58,7 +53,7 @@ const LandingPage = () => {
                   paddingX={12}
                   borderRadius={20}
                 >
-                  <Box opacity="75%">
+                  <Box opacity="75%" height={50}>
                     <UKFlag />
                   </Box>
                   <Text marginTop={5} fontWeight="bold">
@@ -76,7 +71,7 @@ const LandingPage = () => {
                   paddingX={12}
                   borderRadius={20}
                 >
-                  <Box opacity="75%">
+                  <Box opacity="75%" height={50}>
                     <USAFLag />
                   </Box>
                   <Text marginTop={5} fontWeight="bold">
@@ -94,10 +89,10 @@ const LandingPage = () => {
                   borderRadius={20}
                   onClick={() => navigate("/other")}
                 >
-                  <Box opacity="75%">
+                  <Box opacity="75%" height={50}>
                     <Globe />
                   </Box>
-                  <Text marginTop={5} fontSize="small" fontWeight="bold">
+                  <Text marginTop={5} fontWeight="bold">
                     Other
                   </Text>
                 </Box>
