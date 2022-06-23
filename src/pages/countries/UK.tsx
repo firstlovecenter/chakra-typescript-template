@@ -1,4 +1,4 @@
-import { Box, Grid, Text, Heading, VStack } from "@chakra-ui/react"
+import { Box, Grid, Text, Heading, VStack, Container } from "@chakra-ui/react"
 import { ChakraBox } from "../../components/ChakraBox"
 import useCustomColorMode from "../../hooks/useCustomColorMode"
 const UK = () => {
@@ -6,7 +6,30 @@ const UK = () => {
   return (
     <Box textAlign="center" fontSize="xl">
       <Grid minH="50vh" p={3}>
-        <Heading marginY={20}>United Kingdom</Heading>
+        <Heading marginTop={20}>United Kingdom</Heading>
+        <Heading color={brand}>ONLY</Heading>
+        <Container
+          fontSize="medium"
+          marginTop={5}
+          marginBottom={20}
+          backgroundColor="#8080804f"
+          padding={5}
+          borderRadius={15}
+        >
+          <Text>
+            Please use this medium{" "}
+            <Text as="b" color={brand}>
+              ONLY
+            </Text>{" "}
+            if you are paying from a UK account.
+          </Text>
+          <Text>
+            Make sure to include the reference{" "}
+            <Text as="b" color={brand}>
+              Flow
+            </Text>
+          </Text>
+        </Container>
 
         <VStack align={"stretch"}>
           <ChakraBox animate={{ x: [-40, 0] }}>

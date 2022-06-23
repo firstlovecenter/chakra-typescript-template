@@ -2,8 +2,17 @@
   --accent-color: #2ad5dc;
 }
 
-body {
+
+
+body.chakra-ui-dark  {
   background: url("./assets/images/bg.jpg") !important;
+  height: 100vh !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+body.chakra-ui-light {
+  /* background: url("./assets/images/bg.jpg") !important; */
   height: 100vh !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
