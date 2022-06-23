@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const concurrently = require('concurrently')
-const { runner, concurrentOpts, TEMPLATE_DIR } = require('./common')
+const { runner, concurrentOpts } = require('./common')
 
 const versionBump = []
 const release = []
@@ -10,7 +10,7 @@ switch (process.argv[2]) {
   case 'patch':
     versionBump.push({
       name: 'bump-frontend',
-      command: `cd ${TEMPLATE_DIR} && ${runner} version patch && git add package.json package-lock.json`,
+      command: ` ${runner} version patch && git add package.json package-lock.json`,
       prefixColor: 'red',
     })
     release.push({
@@ -23,7 +23,7 @@ switch (process.argv[2]) {
   case 'minor':
     versionBump.push({
       name: 'bump-frontend',
-      command: `cd ${TEMPLATE_DIR} && ${runner} version minor && git add package.json package-lock.json`,
+      command: ` ${runner} version minor && git add package.json package-lock.json`,
       prefixColor: 'red',
     })
     release.push({
@@ -36,7 +36,7 @@ switch (process.argv[2]) {
   case 'major':
     versionBump.push({
       name: 'bump-frontend',
-      command: `cd ${TEMPLATE_DIR} && ${runner} version major && git add package.json package-lock.json`,
+      command: ` ${runner} version major && git add package.json package-lock.json`,
       prefixColor: 'red',
     })
     release.push({
