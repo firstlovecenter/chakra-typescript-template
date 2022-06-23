@@ -1,5 +1,9 @@
+:root{
+    --accent-color: #2ad5dc;
+}
+
 body {
-    background-image: url("./images/bg.jpg") !important;
+    /* background-image: url("./assets/images/bg.jpg") !important; */
 
     height: 100%;
     width: 100%;

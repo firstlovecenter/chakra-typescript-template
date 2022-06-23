@@ -2,6 +2,11 @@
   "name": "flow-offering",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://firstlovecenter.github.io/flow-giving",
+  "author": {
+    "name": "John-Dag Addy",
+    "email": "johndagaddy@firstlovecenter.com"
+  },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
