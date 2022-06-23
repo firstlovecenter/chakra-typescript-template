@@ -53,7 +53,7 @@ const LandingPage = () => {
                   paddingX={12}
                   borderRadius={20}
                 >
-                  <Box opacity="75%" height={50}>
+                  <Box opacity="75%" height={50} width={50}>
                     <UKFlag />
                   </Box>
                   <Text marginTop={5} fontWeight="bold">

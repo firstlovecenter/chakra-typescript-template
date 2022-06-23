@@ -23,8 +23,11 @@ const Ghana = () => {
 
               <Text marginBottom={5}>024 631 8494</Text>
               <Text fontWeight="bold">Bank Account</Text>
-              <Text>First Love Church</Text>
               <Text fontWeight="bold" color="red.500">
+                Zenith Bank
+              </Text>
+              <Text>First Love Church</Text>
+              <Text fontWeight="bold" color="red.500" fontSize="2xl">
                 6010922100
               </Text>
               <Text marginBottom={5}>North Industrial Area Branch</Text>
