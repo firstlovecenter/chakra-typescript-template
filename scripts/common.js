@@ -2,9 +2,9 @@
 const path = require('path')
 const execa = require('execa')
 
-const { templateName, templateFileName } = require('./config')
+const { templateName } = require('./config')
 
-const TEMPLATE_DIR = path.join(__dirname, `../${templateFileName}`)
+const TEMPLATE_DIR = path.join(__dirname, `../`)
 
 const shouldUseYarn = () => {
   try {
@@ -25,7 +25,6 @@ const concurrentOpts = {
 
 module.exports = {
   templateName,
-  templateFileName,
   concurrentOpts,
   runner,
   TEMPLATE_DIR,
