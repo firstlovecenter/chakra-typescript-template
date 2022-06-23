@@ -1,4 +1,4 @@
-import { Box, ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider } from "@chakra-ui/react"
 import theme from "./utils/theme"
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import LandingPage from "./pages/LandingPage"
