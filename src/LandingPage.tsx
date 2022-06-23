@@ -8,6 +8,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { ChakraBox } from "./ChakraBox";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import GhanaFlag from "./flags/GhanaFlag";
 import Globe from "./flags/Globe";
@@ -25,61 +26,74 @@ const LandingPage = () => {
         <Center>
           <Grid templateColumns="repeat(2, 1fr)" gap={6}>
             <GridItem w="100%">
-              <Box
-                onClick={() => {
-                  navigate("/ghana");
-                }}
-                dropShadow={"2xl"}
-                bg="#2d2e3e"
-                paddingY={6}
-                paddingX={12}
-                borderRadius={20}
-              >
-                <Box opacity="75%">
-                  <GhanaFlag />
-                </Box>
-                <Text marginTop={5} fontWeight="bold">
-                  Ghana
-                </Text>
-              </Box>
-            </GridItem>
-            <GridItem w="100%">
-              <Box
-                onClick={() => navigate("/uk")}
-                bg="#2d2e3e"
-                paddingY={6}
-                paddingX={12}
-                borderRadius={20}
-              >
-                <Box opacity="75%">
-                  <UKFlag />
-                </Box>
-                <Text marginTop={5} fontWeight="bold">
-                  UK
-                </Text>
-              </Box>
-            </GridItem>
-            <GridItem w="100%">
-              <Box bg="#2d2e3e" paddingY={6} paddingX={12} borderRadius={20}>
-                <Box opacity="75%">
-                  <USAFLag />
-                </Box>
-                <Text marginTop={5} fontWeight="bold">
-                  USA
-                </Text>
-              </Box>
-            </GridItem>{" "}
-            <GridItem w="100%">
-              <Link href="https://paylink.today/firstlovechurch/">
-                <Box bg="#2d2e3e" paddingY={6} paddingX={12} borderRadius={20}>
+              <ChakraBox animate={{ x: [-20, 0] }}>
+                <Box
+                  onClick={() => {
+                    navigate("/ghana");
+                  }}
+                  dropShadow={"2xl"}
+                  bg="#2d2e3e"
+                  paddingY={6}
+                  paddingX={12}
+                  borderRadius={20}
+                >
                   <Box opacity="75%">
-                    <Globe />
+                    <GhanaFlag />
                   </Box>
-                  <Text marginTop={5} fontSize="small" fontWeight="bold">
-                    Other
+                  <Text marginTop={5} fontWeight="bold">
+                    Ghana
                   </Text>
                 </Box>
-              </Link>
+              </ChakraBox>
+            </GridItem>
+            <GridItem w="100%">
+              <ChakraBox animate={{ x: [-30, 0] }}>
+                <Box
+                  onClick={() => navigate("/uk")}
+                  bg="#2d2e3e"
+                  paddingY={6}
+                  paddingX={12}
+                  borderRadius={20}
+                >
+                  <Box opacity="75%">
+                    <UKFlag />
+                  </Box>
+                  <Text marginTop={5} fontWeight="bold">
+                    UK
+                  </Text>
+                </Box>
+              </ChakraBox>
+            </GridItem>
+            <GridItem w="100%">
+              <ChakraBox animate={{ x: [-40, 0] }}>
+                <Box bg="#2d2e3e" paddingY={6} paddingX={12} borderRadius={20}>
+                  <Box opacity="75%">
+                    <USAFLag />
+                  </Box>
+                  <Text marginTop={5} fontWeight="bold">
+                    USA
+                  </Text>
+                </Box>
+              </ChakraBox>
+            </GridItem>{" "}
+            <GridItem w="100%">
+              <ChakraBox animate={{ x: [-50, 0] }}>
+                <Link href="https://paylink.today/firstlovechurch/">
+                  <Box
+                    bg="#2d2e3e"
+                    paddingY={6}
+                    paddingX={12}
+                    borderRadius={20}
+                  >
+                    <Box opacity="75%">
+                      <Globe />
+                    </Box>
+                    <Text marginTop={5} fontSize="small" fontWeight="bold">
+                      Other
+                    </Text>
+                  </Box>
+                </Link>
+              </ChakraBox>
             </GridItem>
           </Grid>
         </Center>

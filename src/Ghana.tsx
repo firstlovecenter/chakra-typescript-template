@@ -1,4 +1,5 @@
 import { Box, Grid, Text, Heading, VStack } from "@chakra-ui/react";
+import { ChakraBox } from "./ChakraBox";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 const Ghana = () => {
   return (
@@ -9,16 +10,18 @@ const Ghana = () => {
         </Heading>
         <ColorModeSwitcher justifySelf="flex-end" />
         <VStack align={"stretch"}>
-          <Box dropShadow={"2xl"} bg="#2d2e3e" padding={6} borderRadius={20}>
-            <Text fontWeight="bold">Mobile Money </Text>
-            <Text fontWeight="bold">MTN</Text>
+          <ChakraBox animate={{ x: [-40, 0] }}>
+            <Box dropShadow={"2xl"} bg="#2d2e3e" padding={6} borderRadius={20}>
+              <Text fontWeight="bold">Mobile Money </Text>
+              <Text fontWeight="bold">MTN</Text>
 
-            <Text marginBottom={5}>024 444 444 </Text>
-            <Text fontWeight="bold">Vodafone</Text>
-            <Text marginBottom={5}>024 444 444 </Text>
-            <Text fontWeight="bold">AirtelTigo</Text>
-            <Text marginBottom={5}>024 444 444 </Text>
-          </Box>
+              <Text marginBottom={5}>024 444 444 </Text>
+              <Text fontWeight="bold">Vodafone</Text>
+              <Text marginBottom={5}>024 444 444 </Text>
+              <Text fontWeight="bold">AirtelTigo</Text>
+              <Text marginBottom={5}>024 444 444 </Text>
+            </Box>
+          </ChakraBox>
         </VStack>
       </Grid>
       <Text marginTop={150}>God Bless You As You Give!</Text>
