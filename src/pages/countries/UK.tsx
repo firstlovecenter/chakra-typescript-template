@@ -1,8 +1,10 @@
-import { Box, Grid, Text, Heading, VStack, Container } from "@chakra-ui/react"
-import { ChakraBox } from "../../components/ChakraBox"
-import useCustomColorMode from "../../hooks/useCustomColorMode"
-const UK = () => {
+import { Box, Grid, Text, Heading, VStack, Container } from '@chakra-ui/react'
+import ChakraBox from '../../components/ChakraBox'
+import useCustomColorMode from '../../hooks/useCustomColorMode'
+
+function UK() {
   const { bg, brand } = useCustomColorMode()
+
   return (
     <Box textAlign="center" fontSize="xl">
       <Grid minH="50vh" p={3}>
@@ -17,25 +19,25 @@ const UK = () => {
           borderRadius={15}
         >
           <Text>
-            Please use this medium{" "}
+            Please use this medium{' '}
             <Text as="b" color={brand}>
               ONLY
-            </Text>{" "}
+            </Text>
             if you are paying from a UK account.
           </Text>
           <Text>
-            Make sure to include the reference{" "}
+            Make sure to include the reference
             <Text as="b" color={brand}>
               Flow
             </Text>
           </Text>
         </Container>
 
-        <VStack align={"stretch"}>
+        <VStack align="stretch">
           <ChakraBox animate={{ x: [-40, 0] }}>
-            <Box dropShadow={"2xl"} bg={bg} padding={6} borderRadius={20}>
+            <Box dropShadow="2xl" bg={bg} padding={6} borderRadius={20}>
               <Text color={brand} fontWeight="bold" marginBottom={5}>
-                Bank Account Details{" "}
+                Bank Account Details{' '}
               </Text>
               <Text>
                 <Text as="b">Account Name: </Text>First Love Church

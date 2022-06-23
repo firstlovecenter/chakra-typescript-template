@@ -1,7 +1,8 @@
-import { Box, Grid, Text, Heading, VStack } from "@chakra-ui/react"
-import { ChakraBox } from "../../components/ChakraBox"
-import useCustomColorMode from "../../hooks/useCustomColorMode"
-const USA = () => {
+import { Box, Grid, Text, Heading, VStack } from '@chakra-ui/react'
+import ChakraBox from 'components/ChakraBox'
+import useCustomColorMode from 'hooks/useCustomColorMode'
+
+function USA() {
   const { bg, brand } = useCustomColorMode()
 
   return (
@@ -9,19 +10,19 @@ const USA = () => {
       <Grid minH="50vh" p={3}>
         <Heading marginY={20}>United States of America</Heading>
 
-        <VStack align={"stretch"}>
+        <VStack align="stretch">
           <ChakraBox animate={{ x: [-40, 0] }}>
-            <Box dropShadow={"2xl"} bg={bg} padding={6} borderRadius={20}>
+            <Box dropShadow="2xl" bg={bg} padding={6} borderRadius={20}>
               <Text color={brand} fontWeight="bold" marginBottom={5}>
                 Text to Give
               </Text>
               <Text fontWeight="bold">Offering</Text>
               <Text marginBottom={5}>
-                Text{" "}
+                Text{' '}
                 <Text as="b" color={brand}>
-                  LCI 10{" "}
+                  LCI 10{' '}
                 </Text>
-                to{" "}
+                to{' '}
                 <Text as="b" color={brand}>
                   45777
                 </Text>
@@ -29,11 +30,11 @@ const USA = () => {
 
               <Text fontWeight="bold">Tithe</Text>
               <Text marginBottom={5}>
-                Text{" "}
+                Text{' '}
                 <Text as="b" color={brand}>
                   LCI 200
-                </Text>{" "}
-                to{" "}
+                </Text>{' '}
+                to{' '}
                 <Text as="b" color={brand}>
                   45777
                 </Text>

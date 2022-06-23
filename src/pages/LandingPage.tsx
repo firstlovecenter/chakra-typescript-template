@@ -1,13 +1,13 @@
-import { Box, Grid, GridItem, Center, Text, Heading } from "@chakra-ui/react"
-import { useNavigate } from "react-router-dom"
-import { ChakraBox } from "../components/ChakraBox"
-import GhanaFlag from "../assets/flags/GhanaFlag"
-import Globe from "../assets/flags/Globe"
-import UKFlag from "../assets/flags/UKFlag"
-import USAFLag from "../assets/flags/USAFlag"
-import useCustomColorMode from "../hooks/useCustomColorMode"
+import { Box, Grid, GridItem, Center, Text, Heading } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
+import ChakraBox from 'components/ChakraBox'
+import GhanaFlag from 'assets/flags/GhanaFlag'
+import Globe from 'assets/flags/Globe'
+import UKFlag from 'assets/flags/UKFlag'
+import USAFLag from 'assets/flags/USAFlag'
+import useCustomColorMode from '../hooks/useCustomColorMode'
 
-const LandingPage = () => {
+function LandingPage() {
   const navigate = useNavigate()
   const { bg, brand } = useCustomColorMode()
 
@@ -26,7 +26,7 @@ const LandingPage = () => {
               <ChakraBox animate={{ x: [-20, 0] }}>
                 <Box
                   onClick={() => {
-                    navigate("/ghana")
+                    navigate('/ghana')
                   }}
                   boxShadow="sm"
                   bg={bg}
@@ -47,7 +47,7 @@ const LandingPage = () => {
             <GridItem width="100%" height="100%">
               <ChakraBox animate={{ x: [-30, 0] }}>
                 <Box
-                  onClick={() => navigate("/uk")}
+                  onClick={() => navigate('/uk')}
                   bg={bg}
                   paddingY={6}
                   paddingX={12}
@@ -65,7 +65,7 @@ const LandingPage = () => {
             <GridItem w="100%">
               <ChakraBox animate={{ x: [-40, 0] }}>
                 <Box
-                  onClick={() => navigate("/usa")}
+                  onClick={() => navigate('/usa')}
                   bg={bg}
                   paddingY={6}
                   paddingX={12}
@@ -79,7 +79,7 @@ const LandingPage = () => {
                   </Text>
                 </Box>
               </ChakraBox>
-            </GridItem>{" "}
+            </GridItem>{' '}
             <GridItem w="100%">
               <ChakraBox animate={{ x: [-50, 0] }}>
                 <Box
@@ -87,7 +87,7 @@ const LandingPage = () => {
                   paddingY={6}
                   paddingX={12}
                   borderRadius={20}
-                  onClick={() => navigate("/other")}
+                  onClick={() => navigate('/other')}
                 >
                   <Box opacity="75%" height={50}>
                     <Globe />

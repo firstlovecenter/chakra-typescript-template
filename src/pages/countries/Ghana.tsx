@@ -1,8 +1,9 @@
+import React from 'react'
 import { Box, Grid, Text, Heading, VStack } from '@chakra-ui/react'
-import { ChakraBox } from '../../components/ChakraBox'
+import ChakraBox from 'components/ChakraBox'
 import useCustomColorMode from '../../hooks/useCustomColorMode'
 
-const Ghana = () => {
+function Ghana() {
   const { bg, brand } = useCustomColorMode()
 
   return (
@@ -12,13 +13,13 @@ const Ghana = () => {
           Ghana
         </Heading>
 
-        <VStack align={'stretch'}>
+        <VStack align="stretch">
           <ChakraBox animate={{ x: [-40, 0] }}>
-            <Box dropShadow={'2xl'} bg={bg} padding={6} borderRadius={20}>
+            <Box dropShadow="2xl" bg={bg} padding={6} borderRadius={20}>
               <Text color={brand} fontWeight="bold">
                 Mobile Money{' '}
               </Text>
-              <Text fontWeight="bold" color={'#fcb900'}>
+              <Text fontWeight="bold" color="#fcb900">
                 MTN
               </Text>
 

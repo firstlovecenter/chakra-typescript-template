@@ -1,31 +1,70 @@
 {
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "airbnb",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    ],
-    "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "no-relative-import-paths",
+    "import"
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 11,
-      "sourceType": "module"
-    },
-    "plugins": ["react", "prettier"],
-    "rules": {
-      "prettier/prettier": "warn",
-      "react/prop-types": "error",
-      "no-console": "error"
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
     }
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "react/prop-types": "error",
+    "no-unused-vars": "error",
+    "no-console": "error",
+    "import/extensions": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      { "allowSameFolder": true }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx", ".ts"]
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
   }
-  
+}

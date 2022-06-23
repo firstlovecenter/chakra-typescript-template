@@ -9,14 +9,14 @@ import {
   DrawerOverlay,
   IconButton,
   useDisclosure,
-} from "@chakra-ui/react"
-import React from "react"
-import { GiHamburgerMenu } from "react-icons/gi"
-import { useNavigate } from "react-router"
-import { ColorModeSwitcher } from "../components/ColorModeSwitcher"
-import useCustomColorMode from "../hooks/useCustomColorMode"
+} from '@chakra-ui/react'
+import React from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { useNavigate } from 'react-router-dom'
+import { ColorModeSwitcher } from '../components/ColorModeSwitcher'
+import useCustomColorMode from '../hooks/useCustomColorMode'
 
-const Navigation = () => {
+function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef(null)
   const navigate = useNavigate()
@@ -24,16 +24,16 @@ const Navigation = () => {
 
   const menuItems = [
     {
-      name: "Home",
-      link: "/",
+      name: 'Home',
+      link: '/',
     },
     {
-      name: "Ghana",
-      link: "/ghana",
+      name: 'Ghana',
+      link: '/ghana',
     },
-    { name: "UK", link: "/uk" },
-    { name: "USA", link: "/usa" },
-    { name: "Other", link: "/other" },
+    { name: 'UK', link: '/uk' },
+    { name: 'USA', link: '/usa' },
+    { name: 'Other', link: '/other' },
   ]
   return (
     <>
@@ -62,9 +62,9 @@ const Navigation = () => {
           <DrawerHeader>Menu</DrawerHeader>
 
           <DrawerBody>
-            {menuItems.map((item, i) => (
+            {menuItems.map((item) => (
               <Button
-                key={i}
+                key={item.name}
                 bg={bg}
                 paddingY={8}
                 marginY={2}
@@ -80,7 +80,7 @@ const Navigation = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <ColorModeSwitcher justifySelf={"flex-end"} />
+            <ColorModeSwitcher justifySelf="flex-end" />
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
