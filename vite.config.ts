@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 import viteTsconfigPaths from 'vite-tsconfig-paths'
 import svgrPlugin from 'vite-plugin-svgr'
 import dns from 'dns'
@@ -20,10 +20,6 @@ export default defineConfig(({ command, mode }) => {
     build: {
       sourcemap: true, // Source map generation must be turned on
     },
-    plugins: [
-      react(),
-      viteTsconfigPaths(),
-      svgrPlugin(),
-    ],
+    plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
   }
 })

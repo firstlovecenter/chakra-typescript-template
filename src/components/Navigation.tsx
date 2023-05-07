@@ -14,7 +14,7 @@ import React from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useNavigate } from 'react-router-dom'
 import { ColorModeSwitcher } from '../components/ColorModeSwitcher'
-import useCustomColorMode from '../hooks/useCustomColorMode'
+import useCustomColorMode from '../hooks/useCustomColors'
 
 function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -27,14 +27,8 @@ function Navigation() {
       name: 'Home',
       link: '/',
     },
-    {
-      name: 'Ghana',
-      link: '/ghana',
-    },
-    { name: 'UK', link: '/uk' },
-    { name: 'USA', link: '/usa' },
-    { name: 'Other', link: '/other' },
   ]
+
   return (
     <>
       <IconButton

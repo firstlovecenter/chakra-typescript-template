@@ -1,21 +1,19 @@
-import { ChakraProvider } from "@chakra-ui/react"
-import theme from "./utils/theme"
-import { Routes, Route, BrowserRouter } from "react-router-dom"
-import LandingPage from "./pages/LandingPage"
-import "./App.css"
-import UK from "./pages/countries/UK"
-import Navigation from "./pages/Navigation"
-import BackButton from "./pages/BackButton"
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navigation from './components/Navigation'
+import LandingPage from './pages/LandingPage'
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
     <BrowserRouter>
-      <BackButton />
       <Navigation />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-    
       </Routes>
     </BrowserRouter>
-  </ChakraProvider>
-)
+  )
+}
+
+export default App
